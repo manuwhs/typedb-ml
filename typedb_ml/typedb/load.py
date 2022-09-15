@@ -42,7 +42,7 @@ def load_typeql_file(typedb_binary_location: str, database_name: str, typeql_fil
         None
     """
     sp.check_call([
-        './typedb',
+        'typedb',
         'console',
         f'--command=transaction {database_name} {file_type.value} write',
         f'--command=source {typeql_file_path}',
